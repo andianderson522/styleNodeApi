@@ -11,5 +11,13 @@
   "boss": true,
   "eqnull": true,
   "node": true,
-  "es5": true
+  "es5": true,
+  "predef": [ 
+    "module",
+    "_",
+    "moment",
+        "before",
+        "describe",
+        "it"
+  ]
 }

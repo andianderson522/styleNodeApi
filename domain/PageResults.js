@@ -23,3 +23,5 @@ var PageResults = {
 	}
 
 };
+
+module.exports = PageResults;
