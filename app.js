@@ -3,6 +3,18 @@
  */
 var express = require('express');
 var http = require('http');
+var mysql = require('mysql');
+
+var pool = mysql.createPool({
+	host : 'style-ci-srv01.conde.io',
+	port : '3306',
+	user : 'style_app',
+	password : "style1",
+	database : 'style',
+	connectionLimit : 50,
+	queueLimit : 50
+
+});
 
 var app = express();
 

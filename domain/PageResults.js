@@ -21,7 +21,6 @@ var PageResults = {
 			this.lastPage = false;
 		}
 	}
-
 };
 
 module.exports = PageResults;

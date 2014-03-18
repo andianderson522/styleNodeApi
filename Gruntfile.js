@@ -4,9 +4,6 @@ module.exports = function(grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
-		nodeunit : {
-			files : [ 'test/**/*_test.js' ],
-		},
 		jshint : {
 			options : {
 				jshintrc : '.jshintrc'
@@ -16,6 +13,9 @@ module.exports = function(grunt) {
 			},
 			lib : {
 				src : [ 'lib/**/*.js' ]
+			},
+			domain : {
+				src : [ 'domain/**/*.js' ]
 			},
 			test : {
 				src : [ 'test/**/*.js' ]
@@ -28,6 +28,10 @@ module.exports = function(grunt) {
 			},
 			lib : {
 				files : '<%= jshint.lib.src %>',
+				tasks : [ 'jshint:lib', 'mochaTest' ]
+			},
+			domain : {
+				files : '<%= jshint.domain.src %>',
 				tasks : [ 'jshint:lib', 'mochaTest' ]
 			},
 			test : {
